@@ -1,5 +1,5 @@
 resource "github_repository" "main" {
-  name        = var.name
+  name        = var.repository_name
   description = var.description
   topics      = var.topics
 

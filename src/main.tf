@@ -25,7 +25,7 @@ module "repository" {
 
   for_each = local.repositories
 
-  name               = each.value[0].name
+  repository_name    = each.value[0].name
   description        = each.value[0].description
   topics             = each.value[0].topics
   visibility         = each.value[0].visibility
@@ -33,6 +33,7 @@ module "repository" {
   merge_options      = each.value[0].merge_options
   gitignore_template = each.value[0].gitignore_template
   license_template   = each.value[0].license_template
+  actions            = each.value[0].actions
   is_archived        = each.value[0].is_archived
 
 }
