@@ -24,4 +24,8 @@ resource "github_repository" "main" {
 
   archived           = can(var.is_archived) ? var.is_archived : false
   archive_on_destroy = true
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
