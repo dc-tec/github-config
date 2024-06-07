@@ -1,14 +1,12 @@
 repositories:
-  - name: github-tf-test
-    description: Test Repository to test Github Terraform Provider
-    topics: ["terraform", "github"]
-    gitignore_template: Terraform
+  - name: nixos-config
+    description: NixOS Configuration Repository
+    topics: ["nix", "nixos", "home-manager", "nix-flake", "sops-nix"]
+    gitignore_template: null
     license_template: unlicense
     visibility: public
     actions:
-      - secrets:
-          - name: SECRET_TEST
-            key_vault_secret_name: github-test
+      - secrets: []
         variables: []
     merge_options:
       - merge_commit: false
@@ -29,6 +27,28 @@ repositories:
     visibility: public
     actions:
       - secrets: []
+        variables: []
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: true
+        projects: false
+        wiki: false
+    is_archived: false
+
+  - name: github-tf-test
+    description: Test Repository to test Github Terraform Provider
+    topics: ["terraform", "github"]
+    gitignore_template: Terraform
+    license_template: unlicense
+    visibility: public
+    actions:
+      - secrets:
+          - name: SECRET_TEST
+            key_vault_secret_name: github-test
         variables: []
     merge_options:
       - merge_commit: false
