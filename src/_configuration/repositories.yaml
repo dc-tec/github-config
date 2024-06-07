@@ -1,3 +1,34 @@
 repositories:
-  - name:
-    topics:
+  - name: github-tf-test
+    description: Test Repository to test Github Terraform Provider
+    topics: ["terraform", "github"]
+    gitignore_template: Terraform
+    license_template: unlicense
+    visibility: public
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: true
+        projects: false
+        wiki: false
+    is_archived: false
+
+  - name: azure-infra
+    description: Repository containing general configuration for the deCort.tech Azure Tenant
+    topics: ["azure", "terraform", "entraid", "bicep"]
+    gitignore_template: Terraform
+    license_template: mit
+    visibility: public
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: true
+        projects: false
+        wiki: false
+    is_archived: false
