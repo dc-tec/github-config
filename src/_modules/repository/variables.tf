@@ -1,4 +1,4 @@
-variable "name" {
+variable "repository_name" {
   type        = string
   description = "The name of the repository"
 }
@@ -51,3 +51,20 @@ variable "is_archived" {
   description = "The archived status of the repository"
 }
 
+variable "actions" {
+  type = list(object({
+    secrets = list(object({
+      name                  = string
+      key_vault_secret_name = string
+    }))
+    variables = list(object({
+      name  = string
+      value = string
+    }))
+  }))
+
+  validation {
+    condition     = alltrue([for action in var.actions : can(regex("^GITHUB_", action.secrets[0].name)) == false])
+    error_message = "The secret name cannot start with 'GITHUB_'."
+  }
+}

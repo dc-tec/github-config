@@ -5,6 +5,11 @@ repositories:
     gitignore_template: Terraform
     license_template: unlicense
     visibility: public
+    actions:
+      - secrets:
+          - name: SECRET_TEST
+            key_vault_secret_name: github-test
+        variables: []
     merge_options:
       - merge_commit: false
         rebase_merge: false
@@ -22,6 +27,9 @@ repositories:
     gitignore_template: Terraform
     license_template: mit
     visibility: public
+    actions:
+      - secrets: []
+        variables: []
     merge_options:
       - merge_commit: false
         rebase_merge: false
