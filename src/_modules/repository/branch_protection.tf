@@ -5,4 +5,6 @@ resource "github_branch_protection" "main" {
   enforce_admins          = true
   allows_deletions        = false
   required_linear_history = true
+
+  required_pull_request_reviews {}
 }

@@ -9,7 +9,7 @@ terraform {
       version = "~> 3.106.0"
     }
   }
-  required_version = "1.8.4"
+  required_version = "1.8.5"
 
   ## For development, gonna be moved to a remote state
   backend "azurerm" {
