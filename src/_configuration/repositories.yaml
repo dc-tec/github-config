@@ -6,7 +6,75 @@ repositories:
     license_template: unlicense
     visibility: public
     actions:
-      - secrets: []
+      - secrets:
+          - key_vault_secret_name: renovate-token
+            name: RENOVATE_TOKEN
+        variables: []
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: false
+        projects: false
+        wiki: true
+    is_archived: false
+
+  - name: nixvim
+    description: My personal NixVim Configuration
+    topics: ["nix", "neovim", "nix-flake", "nixvim-config"]
+    gitignore_template: null
+    license_template: unlicense
+    visibility: public
+    actions:
+      - secrets:
+          - key_vault_secret_name: renovate-token
+            name: RENOVATE_TOKEN
+        variables: []
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: false
+        projects: false
+        wiki: false
+    is_archived: false
+
+  - name: k8s-gitops
+    description: Kubernetes GitOps repository for my homelab
+    topics: ["kubernetes", "packer", "terraform", "talos", "gitops", "argocd"]
+    gitignore_template: null
+    license_template: unlicense
+    visibility: public
+    actions:
+      - secrets:
+          - key_vault_secret_name: renovate-token
+            name: RENOVATE_TOKEN
+        variables: []
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: false
+        projects: true
+        wiki: false
+    is_archived: false
+
+  - name: azure-infra
+    description: Repository containing general configuration for the deCort.tech Azure Tenant
+    topics: ["azure", "terraform", "entraid", "bicep"]
+    gitignore_template: Terraform
+    license_template: mit
+    visibility: public
+    actions:
+      - secrets:
+          - key_vault_secret_name: renovate-token
+            name: RENOVATE_TOKEN
         variables: []
     merge_options:
       - merge_commit: false
@@ -19,11 +87,33 @@ repositories:
         wiki: false
     is_archived: false
 
-  - name: azure-infra
-    description: Repository containing general configuration for the deCort.tech Azure Tenant
-    topics: ["azure", "terraform", "entraid", "bicep"]
+  - name: github-config
+    description: This repository contains the Terraform code that is used to manage my Github account
+    topics: ["terraform", "github", "azure"]
     gitignore_template: Terraform
-    license_template: mit
+    license_template: unlicense
+    visibility: public
+    actions:
+      - secrets:
+          - key_vault_secret_name: renovate-token
+            name: RENOVATE_TOKEN
+        variables: []
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: false
+        projects: false
+        wiki: false
+    is_archived: false
+
+  - name: niks
+    description: A Small CLI utility wrapper written in Go around common NixOS tasks
+    topics: ["nix", "nixos", "nix-flake", "go"]
+    gitignore_template: Go
+    license_template: unlicense
     visibility: public
     actions:
       - secrets: []
@@ -34,7 +124,7 @@ repositories:
         squash_merge: true
         auto_merge: false
     features:
-      - discussions: true
+      - discussions: false
         projects: false
         wiki: false
     is_archived: false
@@ -46,9 +136,7 @@ repositories:
     license_template: unlicense
     visibility: public
     actions:
-      - secrets:
-          - name: SECRET_TEST
-            key_vault_secret_name: github-test
+      - secrets: []
         variables: []
     merge_options:
       - merge_commit: false
