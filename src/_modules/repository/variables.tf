@@ -68,3 +68,9 @@ variable "actions" {
     error_message = "The secret name cannot start with 'GITHUB_'."
   }
 }
+
+variable "required_approving_review_count" {
+  type        = number
+  description = "The required approving review count of the repository"
+  default     = 0
+}

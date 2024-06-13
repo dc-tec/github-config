@@ -6,5 +6,7 @@ resource "github_branch_protection" "main" {
   allows_deletions        = false
   required_linear_history = true
 
-  required_pull_request_reviews {}
+  required_pull_request_reviews {
+    required_approving_review_count = var.required_approving_review_count != null ? var.required_approving_review_count : 0
+  }
 }
