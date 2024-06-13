@@ -20,6 +20,15 @@ terraform {
   }
 }
 
+resource "github_user_gpg_key" "roelc" {
+  armored_public_key = ""
+}
+
+resource "github_user_ssh_key" "roelc" {
+  title = "Roel de Cort"
+  key   = ""
+}
+
 module "repository" {
   source = "./_modules/repository"
 
