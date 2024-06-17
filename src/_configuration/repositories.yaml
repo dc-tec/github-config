@@ -129,6 +129,26 @@ repositories:
         wiki: false
     is_archived: false
 
+  - name: portfolio
+    description: This repository contains a Github page presenting my portfolio
+    topics: ["portfolio", "cv", "resume"]
+    gitignore_template: null
+    license_template: unlicense
+    visibility: public
+    actions:
+      - secrets: []
+        variables: []
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: false
+        projects: false
+        wiki: false
+    is_archived: false
+
   - name: github-tf-test
     description: Test Repository to test Github Terraform Provider
     topics: ["terraform", "github"]
