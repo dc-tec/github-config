@@ -2,6 +2,7 @@ repositories:
   - name: nixos-config
     description: NixOS Configuration Repository
     topics: ["nix", "nixos", "home-manager", "nix-flake", "sops-nix"]
+    homepage_url: null
     gitignore_template: null
     license_template: unlicense
     visibility: public
@@ -19,11 +20,13 @@ repositories:
       - discussions: false
         projects: false
         wiki: true
+    pages: []
     is_archived: false
 
   - name: nixvim
     description: My personal NixVim Configuration
     topics: ["nix", "neovim", "nix-flake", "nixvim-config"]
+    homepage_url: null
     gitignore_template: null
     license_template: unlicense
     visibility: public
@@ -41,11 +44,13 @@ repositories:
       - discussions: false
         projects: false
         wiki: false
+    pages: []
     is_archived: false
 
   - name: k8s-gitops
     description: Kubernetes GitOps repository for my homelab
     topics: ["kubernetes", "packer", "terraform", "talos", "gitops", "argocd"]
+    homepage_url: null
     gitignore_template: null
     license_template: unlicense
     visibility: public
@@ -63,11 +68,13 @@ repositories:
       - discussions: false
         projects: true
         wiki: false
+    pages: []
     is_archived: false
 
   - name: azure-infra
     description: Repository containing general configuration for the deCort.tech Azure Tenant
     topics: ["azure", "terraform", "entraid", "bicep"]
+    homepage_url: null
     gitignore_template: Terraform
     license_template: mit
     visibility: public
@@ -85,11 +92,13 @@ repositories:
       - discussions: true
         projects: false
         wiki: false
+    pages: []
     is_archived: false
 
   - name: github-config
     description: This repository contains the Terraform code that is used to manage my Github account
     topics: ["terraform", "github", "azure"]
+    homepage_url: null
     gitignore_template: Terraform
     license_template: unlicense
     visibility: public
@@ -107,11 +116,13 @@ repositories:
       - discussions: false
         projects: false
         wiki: false
+    pages: []
     is_archived: false
 
   - name: niks
     description: A Small CLI utility wrapper written in Go around common NixOS tasks
     topics: ["nix", "nixos", "nix-flake", "go"]
+    homepage_url: null
     gitignore_template: Go
     license_template: unlicense
     visibility: public
@@ -127,11 +138,13 @@ repositories:
       - discussions: false
         projects: false
         wiki: false
+    pages: []
     is_archived: false
 
   - name: portfolio
     description: This repository contains a Github page presenting my portfolio
     topics: ["portfolio", "cv", "resume"]
+    homepage_url: "https://decort.tech/"
     gitignore_template: null
     license_template: unlicense
     visibility: public
@@ -147,11 +160,41 @@ repositories:
       - discussions: false
         projects: false
         wiki: false
+    pages:
+      - build_type: "legacy"
+        cname: "decort.tech"
+        branch: "main"
+        path: "/"
+    is_archived: false
+
+  - name: cloudflare-config
+    description: This repository contains the Terraform code that is used to manage Cloudflare
+    topics: ["terraform", "cloudflare"]
+    homepage_url: null
+    gitignore_template: Terraform
+    license_template: unlicense
+    visibility: public
+    actions:
+      - secrets:
+          - key_vault_secret_name: renovate-token
+            name: RENOVATE_TOKEN
+        variables: []
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: false
+        projects: false
+        wiki: false
+    pages: []
     is_archived: false
 
   - name: github-tf-test
     description: Test Repository to test Github Terraform Provider
     topics: ["terraform", "github"]
+    homepage_url: null
     gitignore_template: Terraform
     license_template: unlicense
     visibility: public
@@ -167,4 +210,5 @@ repositories:
       - discussions: true
         projects: false
         wiki: false
+    pages: []
     is_archived: false

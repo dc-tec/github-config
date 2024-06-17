@@ -8,6 +8,11 @@ variable "description" {
   description = "The description of the repository"
 }
 
+variable "homepage_url" {
+  type        = string
+  description = "The homepage URL of the repository"
+}
+
 variable "visibility" {
   type        = string
   description = "The visibility of the repository"
@@ -19,6 +24,11 @@ variable "features" {
     projects    = bool
     wiki        = bool
   }))
+  default = [{
+    discussions = false
+    projects    = false
+    wiki        = false
+  }]
 }
 
 variable "merge_options" {
@@ -28,6 +38,27 @@ variable "merge_options" {
     squash_merge = bool
     auto_merge   = bool
   }))
+  default = [{
+    merge_commit = false
+    rebase_merge = false
+    squash_merge = true
+    auto_merge   = false
+  }]
+
+}
+
+variable "pages" {
+  type = list(object({
+    build_type = string
+    cname      = string
+    branch     = string
+    path       = string
+  }))
+
+  validation {
+    condition     = length(var.pages) <= 1
+    error_message = "Only one page is allowed."
+  }
 }
 
 variable "topics" {
@@ -44,11 +75,14 @@ variable "gitignore_template" {
 variable "license_template" {
   type        = string
   description = "The license template of the repository"
+
+  default = "unlicense"
 }
 
 variable "is_archived" {
   type        = bool
   description = "The archived status of the repository"
+  default     = false
 }
 
 variable "actions" {
