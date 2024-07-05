@@ -96,11 +96,7 @@ repositories:
       - discussions: false
         projects: true
         wiki: false
-    pages:
-      - build_type: "legacy"
-        cname: "helm.decort.tech"
-        branch: "main"
-        path: "/"
+    pages: []
     is_archived: false
 
   - name: azure-infra
