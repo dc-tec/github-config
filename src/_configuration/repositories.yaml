@@ -10,6 +10,8 @@ repositories:
       - secrets:
           - key_vault_secret_name: renovate-token
             name: RENOVATE_TOKEN
+          - key_vault_secret_name: nix-flake-github
+            name: FLAKE_TOKEN
         variables: []
     merge_options:
       - merge_commit: false
@@ -34,6 +36,8 @@ repositories:
       - secrets:
           - key_vault_secret_name: renovate-token
             name: RENOVATE_TOKEN
+          - key_vault_secret_name: nix-flake-github
+            name: FLAKE_TOKEN
         variables: []
     merge_options:
       - merge_commit: false
@@ -92,11 +96,7 @@ repositories:
       - discussions: false
         projects: true
         wiki: false
-    pages:
-      - build_type: "legacy"
-        cname: "helm.decort.tech"
-        branch: "main"
-        path: "/"
+    pages: []
     is_archived: false
 
   - name: azure-infra
