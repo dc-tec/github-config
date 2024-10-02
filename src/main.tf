@@ -65,5 +65,4 @@ module "repository" {
   actions            = each.value[0].actions
   pages              = each.value[0].pages
   is_archived        = each.value[0].is_archived
-
 }
