@@ -37,6 +37,40 @@ resource "github_user_gpg_key" "roelc" {
     EOT
 }
 
+resource "github_user_gpg_key" "roelc_darwin" {
+  armored_public_key = <<EOT
+     -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mQINBGbeGJQBEACa2gs0jQrsk/wqjB0JXqi/GUEvB2VhAMV5qoaFRkaOx1LmZ7vT
+    5RPGL1uGTnPp+Wz1VYai2jhGGweGiSXYg99ZvSRumP+OMPhc+SkasfWMHYeVxvdB
+    YO7+g20J3b88G/8WSAFnVk3ekY+VeHJLe8vDotV2atEKAkS1ccHETfm/ssT6YWK8
+    QlSQw36pRUntnSCAeaLCm5szIBiPy/4hH8amo9Fv1WXRm9g6xZ6uc5uNBlHBhq5F
+    UcEhkJoGBLr7gUQOeuUqfyzd0ThcoCw5KLdhFPdb4Y0l93HNkfNN+Q/EDbitbrgm
+    eHUkBN84OlHmJ1N+LWoAc43HHkHLgk3HqgYFvmpx4lelGZaDyGU3nJJCQ8Zr2Eiz
+    y7iljPHGTTpZ8ozCdQ9lIxu+jrUzRPXI1yLp8WgZtntowDaqv6fGiryLeMpr4RwA
+    /aemPWHwxSIGZX624NrzGhBhqSlxLEI1mfM2SURxoDH72XxtU9jGkAqoNbQtpLHV
+    K9qEBrCFplRccW3Tlxbkiy8AnR6dzOP/BEn7xLIK2Ca2tCjK2+MKrd+zl316ukGq
+    Rt/6xeupZuGVITpF9MweOUh/RAn9vs6MNJPxvtBgZ5BxCWufTY1jpy28AMWpLjKE
+    3ZWxmKuDfAeGC9pYZb9bdwzzIczIFyY5t6u+8xDjX8NogDFQMFyP3BiN7QARAQAB
+    tB9Sb2VsIGRlIENvcnQgPHJvZWxAZGVjb3J0LnRlY2g+iQJXBBMBCABBFiEE+Vyr
+    8LfVTYCH/5s+Mh6tH8PFGWEFAmbeGJQCGwMFCQWjmoAFCwkIBwICIgIGFQoJCAsC
+    BBYCAwECHgcCF4AACgkQMh6tH8PFGWEs6Q//XcfIuOjZT/VS50I/MldssPWId10G
+    vP6hA1ilTXtqqsN2Mhof6GcNMdI6Lziwy47McL1QOevwvJc9hmTe2gD5c3W3xwZj
+    GxYZ+hi6C4YAnHbvz6fQXtgpuwfe9oBehfmVQk5Y73pP09eVsgxLIvHtDTYAhauh
+    J45uGoSZ0/yyL/qdw6iYlaKewOcXQXlQFtpbieX2wIzmLFFckb3Efx4dpGv21MiS
+    Uazgfqj8+9D1rVQ+gCYnzVYAiqmSHEwTOXD7s5YNz0MKUHFnqawDtxhqVVM/ePQb
+    s32pRhAjNMvWQ9nqGWRHFuZXiPYR5pz5zzdv7MzYNnmSCBw8MqnHUUS89t5+EL2u
+    /1iYyxfgxfivBRfHhk2i6q+vdqhAU2qgn+8SlSDX6PinqFp6q6hf4yOeL042fhM8
+    /99t2jgwr8e1+hY7xT9S7aSjAfowhZ2UtV+ym7mJyhP4NyYQhYSiX7Z1QVDCq6nv
+    geemUn69en494PXXLZQQPvJW4L7kDikf6o9CXa63pzdFB7rfhvZAGVuTK8Ys9qdi
+    ptZDl/K/VyqSj2P/t2yLLNQbpJV1Av5snc599vskZ30NsgjuICe2Pb11xhPfFb8y
+    GaVu85zDEmctN3zXWkjhQ77Nr8QGz+m2gUqgp5byC4B+gMXTI9A7ZJ9IfkiC/2Aa
+    azhifA4h2GwV/4U=
+    =XsQ3
+    -----END PGP PUBLIC KEY BLOCK----- 
+  EOT
+}
+
 resource "github_user_ssh_key" "roelc" {
   title = "Roel de Cort"
   key   = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHQ7HSO8O+R1NoKTzdcqWrANt0przSD6ucWqY9G/tJN9"
