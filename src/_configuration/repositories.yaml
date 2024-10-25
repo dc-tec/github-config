@@ -244,7 +244,7 @@ repositories:
     is_archived: false
 
   - name: terraform-aws-boundary-deployment
-    description: Terraform module to deploy Hashicorp Boundary in AWS
+    description: Terraform module to deploy Hashicorp Boundary on AWS
     topics: ["terraform", "boundary", "aws"]
     homepage_url: null
     gitignore_template: Terraform
@@ -294,6 +294,30 @@ repositories:
   - name: tf-action
     description: Github Action to run Terraform or OpenTofu commands
     topics: ["terraform", "opentofu"]
+    homepage_url: null
+    gitignore_template: Terraform
+    license_template: mit
+    visibility: public
+    actions:
+      - secrets:
+          - key_vault_secret_name: renovate-token
+            name: RENOVATE_TOKEN
+        variables: []
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: true
+        projects: false
+        wiki: false
+    pages: []
+    is_archived: false
+
+  - name: terraform-aws-talos
+    description: Terraform module to deploy a Talos Kubernetes cluster on AWS
+    topics: ["terraform", "opentofu", "aws", "kubernetes", "talos"]
     homepage_url: null
     gitignore_template: Terraform
     license_template: mit
