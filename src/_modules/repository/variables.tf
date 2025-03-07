@@ -16,6 +16,11 @@ variable "homepage_url" {
 variable "visibility" {
   type        = string
   description = "The visibility of the repository"
+
+  validation {
+    condition     = contains(["private", "public", "internal"], var.visibility)
+    error_message = "Visibility must be either private, public, or internal."
+  }
 }
 
 variable "features" {
@@ -75,8 +80,12 @@ variable "gitignore_template" {
 variable "license_template" {
   type        = string
   description = "The license template of the repository"
+  default     = "unlicense"
 
-  default = "unlicense"
+  validation {
+    condition     = contains(["mit", "apache-2.0", "gpl-3.0", "unlicense"], var.license_template)
+    error_message = "License must be a valid GitHub license template."
+  }
 }
 
 variable "is_archived" {
