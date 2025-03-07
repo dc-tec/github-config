@@ -339,6 +339,30 @@ repositories:
     pages: []
     is_archived: false
 
+  - name: vault-config
+    description: Vault Configuration
+    topics: ["vault", "terraform", "opentofu"]
+    homepage_url: null
+    gitignore_template: Terraform
+    license_template: mit
+    visibility: public
+    actions:
+      - secrets:
+          - key_vault_secret_name: renovate-token
+            name: RENOVATE_TOKEN
+        variables: []
+    merge_options:
+      - merge_commit: false
+        rebase_merge: false
+        squash_merge: true
+        auto_merge: false
+    features:
+      - discussions: true
+        projects: false
+        wiki: false
+    pages: []
+    is_archived: false
+
   - name: github-tf-test
     description: Test Repository to test Github Terraform Provider
     topics: ["terraform", "github"]
